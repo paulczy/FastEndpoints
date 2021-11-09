@@ -21,12 +21,12 @@
         <Folder Include="[Features]\Sales\Orders\Retrieve\" />
     </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\FastEndpoints.SourceGen\FastEndpoints.SourceGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-    <ProjectReference Include="..\Src\Library\FastEndpoints.csproj" />
-    <ProjectReference Include="..\Src\Security\FastEndpoints.Security.csproj" />
-    <ProjectReference Include="..\Src\Swagger\FastEndpoints.Swagger.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\FastEndpoints.SourceGen\FastEndpoints.SourceGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+        <ProjectReference Include="..\Src\Library\FastEndpoints.csproj" />
+        <ProjectReference Include="..\Src\Security\FastEndpoints.Security.csproj" />
+        <ProjectReference Include="..\Src\Swagger\FastEndpoints.Swagger.csproj" />
+    </ItemGroup>
 
     <ItemGroup>
         <InternalsVisibleTo Include="Test" />

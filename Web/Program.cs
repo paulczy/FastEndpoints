@@ -5,7 +5,6 @@ global using Web.Auth;
 using FastEndpoints.Swagger;
 using Microsoft.AspNetCore.Http.Json;
 using Swashbuckle.AspNetCore.SwaggerUI;
-using System.Text.Json.Serialization;
 using Web.Services;
 
 var builder = WebApplication.CreateBuilder();
@@ -39,11 +38,3 @@ if (!app.Environment.IsProduction())
     });
 }
 app.Run();
-
-[
-    JsonSerializable(typeof(Admin.Login.Request)),
-    JsonSerializable(typeof(Admin.Login.Response)),
-    JsonSerializable(typeof(Customers.Create.Request)),
-    JsonSerializable(typeof(Customers.List.Recent.Response))
-]
-public partial class SerializerContext : JsonSerializerContext { }

@@ -1,30 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+    <PropertyGroup>
 
-    <Version>2.9.0</Version>
+        <Version>2.9.0</Version>
 
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <LangVersion>10</LangVersion>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <NoWarn>1701;1702;CS1591;CS1573</NoWarn>
-    <Authors>Đĵ ΝιΓΞΗΛψΚ</Authors>
-    <Description>Source generators for FastEndpoints.</Description>
-    <PackageProjectUrl>https://github.com/dj-nitehawk/FastEndpoints</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/dj-nitehawk/FastEndpoints.git</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageIcon>icon.png</PackageIcon>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-  </PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>10</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <NoWarn>1701;1702;CS1591;CS1573</NoWarn>
+        <Authors>Đĵ ΝιΓΞΗΛψΚ</Authors>
+        <Description>Source generators for FastEndpoints.</Description>
+        <PackageProjectUrl>https://github.com/dj-nitehawk/FastEndpoints</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/dj-nitehawk/FastEndpoints.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.0-6.final" PrivateAssets="All" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.11.0" PrivateAssets="all" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <None Include="..\Documentation\images\icon.png" Pack="true" PackagePath="\" Link="Content\Icon" />
-  </ItemGroup>
+    <ItemGroup>
+        <None Include="..\Documentation\images\icon.png" Pack="true" PackagePath="\" Link="Content\Icon" />
+    </ItemGroup>
 
 </Project>
