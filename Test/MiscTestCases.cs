@@ -202,8 +202,8 @@ namespace Test
                     FirstName = ""
                 });
 
-            Assert.AreEqual(HttpStatusCode.BadRequest, rsp.StatusCode);
-            Assert.AreEqual(2, res.Errors.Count);
+            Assert.AreEqual(HttpStatusCode.BadRequest, rsp!.StatusCode);
+            Assert.AreEqual(2, res!.Errors.Count);
             Assert.AreEqual("blah", res.Errors["x"].First());
         }
 
@@ -219,8 +219,8 @@ namespace Test
                 Verb = Http.DELETE
             });
 
-            Assert.AreEqual(HttpStatusCode.OK, rsp.StatusCode);
-            Assert.AreEqual("localhost", res.Host);
+            Assert.AreEqual(HttpStatusCode.OK, rsp!.StatusCode);
+            Assert.AreEqual("localhost", res!.Host);
         }
     }
 }

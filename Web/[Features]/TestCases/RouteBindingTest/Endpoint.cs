@@ -2,7 +2,7 @@
 
 public class Endpoint : Endpoint<Request, Response>
 {
-    public ILogger<Endpoint> MyProperty; //this should be ignored by property binding
+    public ILogger<Endpoint>? MyProperty; //this should be ignored by property binding
 
     public override void Configure()
     {

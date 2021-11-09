@@ -3,11 +3,11 @@
 public class Request
 {
     [From(Claim.CustomerID, IsRequired = false)] //allow non customers to set the customer id for updates
-    public string CustomerID { get; set; }
+    public string? CustomerID { get; set; }
 
-    public string Name { get; set; }
+    public string? Name { get; set; }
     public int Age { get; set; }
-    public string Address { get; set; }
+    public string? Address { get; set; }
 }
 
 public class Endpoint : Endpoint<Request>
@@ -30,7 +30,7 @@ public class Endpoint : Endpoint<Request>
         if (!User.HasPermission(Allow.Customers_Update))
             ThrowError("no permission!");
 
-        return SendAsync(req.CustomerID);
+        return SendAsync(req.CustomerID!);
     }
 }
 
